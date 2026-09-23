@@ -183,7 +183,7 @@ footer{padding:72px 0 0;overflow:hidden}
 .foot nav{display:flex;gap:24px;font-size:14px;color:var(--muted);font-weight:500}
 .foot nav a:hover{color:var(--ink)}
 .foot small{font-size:13px;color:var(--muted)}
-.giant{font-size:clamp(128px,22vw,320px);font-weight:800;letter-spacing:-.045em;line-height:.78;text-align:center;white-space:nowrap;color:#E9E3F1;margin-top:56px;margin-bottom:-.17em;user-select:none;-webkit-mask-image:linear-gradient(to bottom,#000 62%,transparent 98%);mask-image:linear-gradient(to bottom,#000 62%,transparent 98%)}
+.giant{font-size:clamp(128px,22vw,320px);font-weight:800;letter-spacing:-.045em;line-height:.8;text-align:center;white-space:nowrap;color:#E9E3F1;margin-top:40px;padding-top:.22em;margin-bottom:-.2em;user-select:none;-webkit-mask-image:linear-gradient(to bottom,#000 62%,transparent 98%);mask-image:linear-gradient(to bottom,#000 62%,transparent 98%)}
 .giant .gdot{display:inline-block;width:.14em;height:.14em;border-radius:50%;background:var(--dookia-lime);margin-left:.05em;transform:translateY(-.62em)}
 
 /* REVEAL */
