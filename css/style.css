@@ -53,17 +53,19 @@ a{color:inherit;text-decoration:none}
 .btn-lime{background:var(--dookia-lime);color:var(--ink)}
 
 /* HERO */
-.hero{padding:96px 0;text-align:center;position:relative;overflow:clip}
+.hero{padding:32px 0 96px;text-align:center;position:relative;overflow:clip}
 .hero .wrap{position:relative;z-index:1}
 
 /* HERO CARD — azul céu Sparkel, texto branco, recorte meio corpo */
-.hero-card{display:grid;grid-template-columns:1.02fr .98fr;align-items:stretch;background:var(--hero-blue);border-radius:36px;overflow:hidden;text-align:left}
+.hero-card{position:relative;display:grid;grid-template-columns:1.02fr .98fr;align-items:stretch;background:var(--hero-blue);border-radius:24px;overflow:hidden;text-align:left}
+.hero-card::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;opacity:.07;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>")}
 .hero-copy{padding:72px 0 72px 64px;align-self:center}
 .hero-copy h1{max-width:12ch;margin:0;color:#fff}
 .hero-copy .sub{margin:24px 0 0;color:rgba(255,255,255,.88)}
 .hero-card .cta-row{justify-content:flex-start}
 .hero-photo{position:relative;min-height:580px}
-.girl{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 0}
+.hero-photo::before{content:"";position:absolute;z-index:0;width:460px;height:460px;right:-70px;top:50%;transform:translateY(-50%);border:12px solid rgba(255,255,255,.5);border-radius:50%;pointer-events:none}
+.girl{position:absolute;z-index:1;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 0}
 .hero-arrow.light{position:absolute;left:6%;top:8%;width:110px;overflow:visible;pointer-events:none;z-index:1}
 .hero-arrow.light path{stroke:#fff;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:doodle-draw 1s var(--ease) .3s forwards}
 @keyframes doodle-draw{to{stroke-dashoffset:0}}
@@ -211,6 +213,7 @@ footer{padding:72px 0 0;overflow:hidden}
   .hero-card .cta-row{justify-content:center}
   .hero-arrow.light{display:none}
   .hero-photo{min-height:0;aspect-ratio:4/5}
+  .hero-photo::before{width:320px;height:320px;right:-50px;border-width:10px}
   .girl{object-position:50% 0}
   .stack{height:560px;max-width:380px}
   .n1{transform:translate(-50%,0) rotate(-4deg)}
