@@ -104,7 +104,7 @@ h1{
 .tick{width:22px;height:22px;border-radius:50%;background:var(--dookia-lime);border:1.5px solid var(--ink);display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
 
 /* TRUST — cinza compacto com texto acima */
-.trust{padding:8px 0 0;text-align:center}
+.trust{padding:24px 0 0;text-align:center}
 .trust-cap{font-size:13px;font-weight:700;letter-spacing:.02em;color:rgba(26,25,29,.55)}
 .marquee{overflow:hidden;max-width:var(--max);margin:30px auto 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
 .track{display:flex;align-items:center;width:max-content;animation:marquee 25s linear infinite}
@@ -205,11 +205,12 @@ footer{padding:72px 0 0;overflow:hidden}
   .hero-copy h1{margin:0 auto}
   .hero-copy .sub{margin:24px auto 0}
   .hero-split .cta-row{justify-content:center}
-  .girl{position:relative;inset:auto;width:100%;height:400px;margin:0 0 -60px;object-fit:cover;object-position:50% 0;transform:none}
+  .girl{position:relative;inset:auto;width:100%;height:400px;margin:0 0 -48px;object-fit:cover;object-position:50% 0;transform:none}
   .blob{top:0;height:100%}
   .hero-photo::after{display:none}
-  .trust{background:var(--hero-blue);padding:26px 0}
+  .trust{background:var(--hero-blue);padding:20px 0}
   .trust-cap{display:none}
+  .trust .marquee{margin-top:0}
   .trust .track img{filter:brightness(0) invert(1);opacity:.9}
   .stack{height:560px;max-width:380px}
   .n1{transform:translate(-50%,0) rotate(-4deg)}
