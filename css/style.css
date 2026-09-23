@@ -53,23 +53,17 @@ a{color:inherit;text-decoration:none}
 .btn-lime{background:var(--dookia-lime);color:var(--ink)}
 
 /* HERO */
-.hero{padding:32px 0 96px;text-align:center;position:relative;overflow:clip}
+.hero{padding:32px 0 0;text-align:center;position:relative;overflow:clip}
 .hero .wrap{position:relative;z-index:1}
 
-/* HERO CARD — azul céu Sparkel, texto branco, recorte meio corpo */
-.hero-card{position:relative;display:grid;grid-template-columns:1.02fr .98fr;align-items:stretch;background:var(--hero-blue);border-radius:24px;overflow:hidden;text-align:left}
-.hero-card::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;opacity:.14;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>")}
-.hero-copy{padding:72px 0 72px 64px;align-self:center}
-.hero-copy h1{max-width:12ch;margin:0;color:#fff}
-.hero-copy .sub{margin:24px 0 0;color:rgba(255,255,255,.88)}
-.hero-card .cta-row{justify-content:flex-start}
-.hero-photo{position:relative;min-height:580px}
-.hero-photo::before{content:"";position:absolute;z-index:0;width:460px;height:460px;right:-70px;top:50%;transform:translateY(-50%) rotate(-6deg);border:12px solid rgba(255,255,255,.5);border-radius:47% 53% 51% 49%/53% 47% 52% 48%;pointer-events:none}
-.girl{position:absolute;z-index:1;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 0}
-.hero-arrow.light{position:absolute;left:6%;top:8%;width:110px;overflow:visible;pointer-events:none;z-index:1}
-.hero-arrow.light path{stroke:#fff;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:doodle-draw 1s var(--ease) .3s forwards}
-@keyframes doodle-draw{to{stroke-dashoffset:0}}
-@keyframes doodle-fade{to{opacity:1}}
+/* HERO SPLIT — Etech, rapariga cortada pela faixa */
+.hero-split{display:grid;grid-template-columns:1.02fr .98fr;gap:72px;align-items:end;text-align:left}
+.hero-copy{padding:40px 0 80px}
+.hero-copy h1{max-width:12ch;margin:0}
+.hero-copy .sub{margin:24px 0 0}
+.hero-split .cta-row{justify-content:flex-start}
+.hero-photo{position:relative}
+.girl{display:block;width:100%;height:480px;object-fit:cover;object-position:50% 0;margin-bottom:-60px}
 h1{
   font-size:clamp(48px,6.2vw,84px);
   line-height:1.02;letter-spacing:-.025em;font-weight:600;
@@ -107,13 +101,12 @@ h1{
 .n3 .pill{background:var(--dookia-lime);color:var(--ink);border:1.5px solid var(--ink)}
 .tick{width:22px;height:22px;border-radius:50%;background:var(--dookia-lime);border:1.5px solid var(--ink);display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
 
-/* TRUST — faixa de logos marquee */
-.trust{padding:8px 0 0;text-align:center}
-.trust-cap{font-size:13px;font-weight:700;letter-spacing:.02em;color:rgba(26,25,29,.55)}
-.marquee{overflow:hidden;max-width:var(--max);margin:30px auto 0;-webkit-mask-image:linear-gradient(90deg,transparent,rgba(0,0,0,.55) 12%,#000 22%,#000 78%,rgba(0,0,0,.55) 88%,transparent);mask-image:linear-gradient(90deg,transparent,rgba(0,0,0,.55) 12%,#000 22%,#000 78%,rgba(0,0,0,.55) 88%,transparent)}
+/* TRUST — faixa azul que corta a foto, logos brancos em loop */
+.trust{position:relative;z-index:2;background:var(--hero-blue);padding:26px 0}
+.marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
 .track{display:flex;align-items:center;width:max-content;animation:marquee 25s linear infinite}
 .group{display:flex;align-items:center;gap:96px;padding-right:96px;flex-shrink:0}
-.track img{height:32px;width:auto;filter:grayscale(1);opacity:.55}
+.track img{height:32px;width:auto;filter:brightness(0) invert(1);opacity:.9}
 .marquee:hover .track{animation-play-state:paused}
 @keyframes marquee{to{transform:translateX(-50%)}}
 
@@ -196,24 +189,21 @@ footer{padding:72px 0 0;overflow:hidden}
 :focus-visible{outline:3px solid var(--dookia-lime);outline-offset:3px;border-radius:8px}
 
 @media (max-width:1180px){
-  .hero-copy{padding:56px 0 56px 48px}
-  .hero-photo{min-height:520px}
-  .hero-arrow.light{width:96px}
+  .hero-split{gap:40px}
+  .girl{height:440px}
 }
 @media (max-width:960px){
   section.block{padding:88px 0}
   .grid{grid-template-columns:1fr;gap:40px}
   .grid.rev > .copy{order:1}
   .grid.rev > .visual{order:2}
-  .hero{padding:72px 0}
-  .hero-card{grid-template-columns:1fr;text-align:center}
-  .hero-copy{padding:48px 32px 8px}
+  .hero{padding:72px 0 0}
+  .hero-split{grid-template-columns:1fr;gap:40px;text-align:center}
+  .hero-copy{padding:0}
   .hero-copy h1{margin:0 auto}
   .hero-copy .sub{margin:24px auto 0}
-  .hero-card .cta-row{justify-content:center}
-  .hero-arrow.light{display:none}
-  .hero-photo{min-height:0;aspect-ratio:4/5}
-  .hero-photo::before{width:320px;height:320px;right:-50px;border-width:10px}
+  .hero-split .cta-row{justify-content:center}
+  .girl{height:400px;margin-bottom:-48px}
   .girl{object-position:50% 0}
   .stack{height:560px;max-width:380px}
   .n1{transform:translate(-50%,0) rotate(-4deg)}
@@ -232,6 +222,5 @@ footer{padding:72px 0 0;overflow:hidden}
   .track{animation:none;flex-wrap:nowrap;justify-content:center;width:100%}
   .group{gap:64px;padding-right:0}
   .track img{flex-shrink:0}
-  .hero-arrow.light path{stroke-dashoffset:0}
   html{scroll-behavior:auto}
 }
