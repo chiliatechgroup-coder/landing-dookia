@@ -108,7 +108,7 @@ h1{
 
 /* TRUST — faixa de logos marquee */
 .trust{padding:8px 0 0;text-align:center}
-.trust-cap{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.trust-cap{font-size:13px;font-weight:700;letter-spacing:.02em;color:rgba(26,25,29,.55)}
 .marquee{overflow:hidden;margin-top:30px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 24%,#000 76%,transparent);mask-image:linear-gradient(90deg,transparent,#000 24%,#000 76%,transparent)}
 .track{display:flex;align-items:center;width:max-content;animation:marquee 25s linear infinite}
 .track img{height:32px;width:auto;margin-right:96px;filter:grayscale(1);opacity:.55}
