@@ -111,7 +111,8 @@ h1{
 .trust-cap{font-size:13px;font-weight:700;letter-spacing:.02em;color:rgba(26,25,29,.55)}
 .marquee{overflow:hidden;max-width:var(--max);margin:30px auto 0;-webkit-mask-image:linear-gradient(90deg,transparent,rgba(0,0,0,.55) 12%,#000 22%,#000 78%,rgba(0,0,0,.55) 88%,transparent);mask-image:linear-gradient(90deg,transparent,rgba(0,0,0,.55) 12%,#000 22%,#000 78%,rgba(0,0,0,.55) 88%,transparent)}
 .track{display:flex;align-items:center;width:max-content;animation:marquee 25s linear infinite}
-.track img{height:32px;width:auto;margin-right:96px;filter:grayscale(1);opacity:.55}
+.group{display:flex;align-items:center;gap:96px;padding-right:96px;flex-shrink:0}
+.track img{height:32px;width:auto;filter:grayscale(1);opacity:.55}
 .marquee:hover .track{animation-play-state:paused}
 @keyframes marquee{to{transform:translateX(-50%)}}
 
@@ -220,13 +221,15 @@ footer{padding:72px 0 0;overflow:hidden}
   .stack:hover .n3{transform:translate(-50%,370px) rotate(-2deg)}
   .ncard{width:320px}
   .close{padding:100px 0 80px}
-  .track img{height:28px;margin-right:60px}
+  .track img{height:28px}
+  .group{gap:60px;padding-right:60px}
 }
 @media (prefers-reduced-motion:reduce){
   *{transition:none!important;animation:none!important}
   .reveal{opacity:1;transform:none}
   .track{animation:none;flex-wrap:nowrap;justify-content:center;width:100%}
-  .track img{flex-shrink:0;margin:0 32px}
+  .group{gap:64px;padding-right:0}
+  .track img{flex-shrink:0}
   .hero-arrow path{stroke-dashoffset:0}
   .hero-arrow .fill-lime{opacity:1}
   html{scroll-behavior:auto}
