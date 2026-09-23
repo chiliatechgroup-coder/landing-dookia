@@ -40,17 +40,22 @@ a{color:inherit;text-decoration:none}
 .logo{font-weight:800;font-size:24px;letter-spacing:-.04em;display:flex;align-items:center;gap:2px}
 .logo i{width:9px;height:9px;background:var(--dookia-lime);border-radius:50%;display:inline-block;margin-left:3px;margin-top:-12px;border:1.5px solid var(--ink)}
 .btn{
+  position:relative;overflow:hidden;
   display:inline-flex;align-items:center;justify-content:center;gap:10px;
   background:var(--ink);color:#fff;border:0;cursor:pointer;
   font-family:inherit;font-weight:600;font-size:16px;
   padding:16px 32px;border-radius:999px;
-  transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s;
+  transition:background-color .2s ease,color .2s ease;
   white-space:nowrap;
 }
-.btn:hover{transform:translateY(-2px);box-shadow:0 14px 28px -14px rgba(26,25,29,.45)}
-.btn:active{transform:translateY(0) scale(.98)}
+.btn:hover{background:var(--hero-blue)}
+.btn:active{background:#1273B8}
+.btn .ripple{position:absolute;width:14px;height:14px;border-radius:50%;background:rgba(255,255,255,.45);transform:translate(-50%,-50%) scale(0);opacity:1;pointer-events:none;animation:ripple .45s ease-out forwards}
+@keyframes ripple{to{transform:translate(-50%,-50%) scale(14);opacity:0}}
 .btn-small{padding:12px 24px;font-size:15px}
 .btn-lime{background:var(--dookia-lime);color:var(--ink)}
+.btn-lime:hover{background:var(--ink);color:#fff}
+.btn-lime:active{background:#000}
 
 /* HERO */
 .hero{padding:32px 0 0;text-align:center;position:relative;overflow:clip}
@@ -229,5 +234,6 @@ footer{padding:72px 0 0;overflow:hidden}
   .track{animation:none;flex-wrap:nowrap;justify-content:center;width:100%}
   .group{gap:64px;padding-right:0}
   .track img{flex-shrink:0}
+  .btn .ripple{display:none}
   html{scroll-behavior:auto}
 }
