@@ -62,8 +62,8 @@ a{color:inherit;text-decoration:none}
 .hero-copy h1{max-width:12ch;margin:0}
 .hero-copy .sub{margin:24px 0 0}
 .hero-split .cta-row{justify-content:flex-start}
-.hero-photo{position:relative}
-.girl{display:block;width:100%;height:480px;object-fit:cover;object-position:50% 0;margin-bottom:-60px}
+.hero-photo{position:relative;min-height:100%}
+.girl{position:absolute;top:36px;right:-16px;bottom:-60px;left:0;width:auto;height:auto;object-fit:cover;object-position:50% 0}
 h1{
   font-size:clamp(48px,6.2vw,84px);
   line-height:1.02;letter-spacing:-.025em;font-weight:600;
@@ -103,7 +103,7 @@ h1{
 
 /* TRUST — faixa azul que corta a foto, logos brancos em loop */
 .trust{position:relative;z-index:2;background:var(--hero-blue);padding:26px 0}
-.marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.marquee{overflow:hidden;max-width:var(--max);margin:0 auto;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
 .track{display:flex;align-items:center;width:max-content;animation:marquee 25s linear infinite}
 .group{display:flex;align-items:center;gap:96px;padding-right:96px;flex-shrink:0}
 .track img{height:32px;width:auto;filter:brightness(0) invert(1);opacity:.9}
@@ -190,7 +190,6 @@ footer{padding:72px 0 0;overflow:hidden}
 
 @media (max-width:1180px){
   .hero-split{gap:40px}
-  .girl{height:440px}
 }
 @media (max-width:960px){
   section.block{padding:88px 0}
@@ -203,8 +202,7 @@ footer{padding:72px 0 0;overflow:hidden}
   .hero-copy h1{margin:0 auto}
   .hero-copy .sub{margin:24px auto 0}
   .hero-split .cta-row{justify-content:center}
-  .girl{height:400px;margin-bottom:-48px}
-  .girl{object-position:50% 0}
+  .girl{position:relative;inset:auto;width:100%;height:400px;margin:0 0 -48px;object-position:50% 0}
   .stack{height:560px;max-width:380px}
   .n1{transform:translate(-50%,0) rotate(-4deg)}
   .n2{transform:translate(-50%,190px) rotate(2deg)}
