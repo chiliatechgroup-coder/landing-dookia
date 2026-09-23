@@ -33,9 +33,7 @@ a{color:inherit;text-decoration:none}
 /* NAV */
 .nav{
   position:sticky;top:0;z-index:50;
-  background:rgba(255,251,255,.82);
-  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
-  border-bottom:1px solid var(--line);
+  background:linear-gradient(to bottom,#FFFBFF 0%,rgba(255,251,255,.82) 50%,rgba(255,251,255,.38) 78%,rgba(255,251,255,0) 100%);
 }
 .nav-inner{max-width:var(--max);margin:0 auto;padding:18px 32px;display:flex;align-items:center;justify-content:space-between}
 .logo{font-weight:800;font-size:24px;letter-spacing:-.04em;display:flex;align-items:center;gap:2px}
