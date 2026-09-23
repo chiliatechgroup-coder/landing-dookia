@@ -50,8 +50,6 @@ a{color:inherit;text-decoration:none}
 .btn:active{transform:translateY(0) scale(.98)}
 .btn-small{padding:12px 24px;font-size:15px}
 .btn-lime{background:var(--dookia-lime);color:var(--ink)}
-.btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
-.btn-ghost:hover{border-color:var(--ink);box-shadow:none}
 
 /* HERO */
 .hero{padding:96px 0;text-align:center;position:relative;overflow:clip}
@@ -71,12 +69,6 @@ a{color:inherit;text-decoration:none}
 .hero-arrow .fill-lime{fill:var(--dookia-lime);stroke:#1A191D;stroke-width:1.5;opacity:0;animation:doodle-fade .5s var(--ease) .9s forwards}
 @keyframes doodle-draw{to{stroke-dashoffset:0}}
 @keyframes doodle-fade{to{opacity:1}}
-.eyebrow{
-  display:inline-flex;align-items:center;gap:8px;
-  font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);
-  border:1px solid var(--line);border-radius:999px;padding:8px 16px;background:#fff;
-}
-.eyebrow b{width:8px;height:8px;border-radius:50%;background:var(--dookia-lime);border:1.5px solid var(--ink);display:inline-block}
 h1{
   font-size:clamp(48px,6.2vw,84px);
   line-height:1.02;letter-spacing:-.025em;font-weight:600;
@@ -84,8 +76,6 @@ h1{
 }
 .sub{max-width:44ch;margin:24px auto 0;color:var(--muted);font-size:19px;line-height:1.55}
 .cta-row{display:flex;gap:12px;justify-content:center;margin-top:36px;flex-wrap:wrap}
-.micro{margin-top:16px;font-size:14px;color:var(--muted)}
-.micro strong{color:var(--ink);font-weight:600}
 
 /* NOTIF STACK */
 .stack{position:relative;max-width:760px;height:400px;margin:64px auto 0}
