@@ -1,6 +1,7 @@
 :root{
   --dookia-lime:#CCF766;
   --dookia-lilac:#F2C7F5;
+  --hero-blue:#1A94E8;
   --ink:#1A191D;
   --on-primary:#FFFFFF;
   --muted:#625A69;
@@ -55,18 +56,16 @@ a{color:inherit;text-decoration:none}
 .hero{padding:96px 0;text-align:center;position:relative;overflow:clip}
 .hero .wrap{position:relative;z-index:1}
 
-/* HERO SPLIT — copy esquerda, fotos direita (Donatia) */
-.hero-split{display:grid;grid-template-columns:1.02fr .98fr;gap:72px;align-items:center;text-align:left}
-.hero-copy h1{max-width:12ch;margin:28px 0 0}
-.hero-copy .sub{margin:24px 0 0}
-.hero-split .cta-row{justify-content:flex-start}
-.hero-photos{position:relative;height:580px}
-.photo{position:absolute;border-radius:28px;object-fit:cover;background:var(--low);box-shadow:0 40px 80px -40px rgba(26,25,29,.38)}
-.photo-back{top:0;right:0;width:64%;aspect-ratio:3/4;transform:rotate(5deg)}
-.photo-front{bottom:0;left:0;width:60%;aspect-ratio:3/4;transform:rotate(-6deg)}
-.hero-arrow{position:absolute;left:-14%;top:0;width:120px;overflow:visible;pointer-events:none}
-.hero-arrow path{stroke:#1A191D;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:doodle-draw 1s var(--ease) .3s forwards}
-.hero-arrow .fill-lime{fill:var(--dookia-lime);stroke:#1A191D;stroke-width:1.5;opacity:0;animation:doodle-fade .5s var(--ease) .9s forwards}
+/* HERO CARD — azul céu Sparkel, texto branco, recorte meio corpo */
+.hero-card{display:grid;grid-template-columns:1.02fr .98fr;align-items:stretch;background:var(--hero-blue);border-radius:36px;overflow:hidden;text-align:left}
+.hero-copy{padding:72px 0 72px 64px;align-self:center}
+.hero-copy h1{max-width:12ch;margin:0;color:#fff}
+.hero-copy .sub{margin:24px 0 0;color:rgba(255,255,255,.88)}
+.hero-card .cta-row{justify-content:flex-start}
+.hero-photo{position:relative;min-height:580px}
+.girl{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 0}
+.hero-arrow.light{position:absolute;left:6%;top:8%;width:110px;overflow:visible;pointer-events:none;z-index:1}
+.hero-arrow.light path{stroke:#fff;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:doodle-draw 1s var(--ease) .3s forwards}
 @keyframes doodle-draw{to{stroke-dashoffset:0}}
 @keyframes doodle-fade{to{opacity:1}}
 h1{
@@ -195,9 +194,9 @@ footer{padding:72px 0 0;overflow:hidden}
 :focus-visible{outline:3px solid var(--dookia-lime);outline-offset:3px;border-radius:8px}
 
 @media (max-width:1180px){
-  .hero-split{gap:40px}
-  .hero-photos{height:520px}
-  .hero-arrow{left:-8%;width:100px}
+  .hero-copy{padding:56px 0 56px 48px}
+  .hero-photo{min-height:520px}
+  .hero-arrow.light{width:96px}
 }
 @media (max-width:960px){
   section.block{padding:88px 0}
@@ -205,14 +204,14 @@ footer{padding:72px 0 0;overflow:hidden}
   .grid.rev > .copy{order:1}
   .grid.rev > .visual{order:2}
   .hero{padding:72px 0}
-  .hero-split{grid-template-columns:1fr;gap:56px;text-align:center}
-  .hero-copy h1{margin:28px auto 0}
+  .hero-card{grid-template-columns:1fr;text-align:center}
+  .hero-copy{padding:48px 32px 8px}
+  .hero-copy h1{margin:0 auto}
   .hero-copy .sub{margin:24px auto 0}
-  .hero-split .cta-row{justify-content:center}
-  .hero-arrow{display:none}
-  .hero-photos{height:auto;max-width:340px;margin:0 auto;width:100%}
-  .photo-back{display:none}
-  .photo-front{position:relative;inset:auto;display:block;margin:0 auto;left:50%;transform:translateX(-50%) rotate(-4deg);width:min(300px,86%)}
+  .hero-card .cta-row{justify-content:center}
+  .hero-arrow.light{display:none}
+  .hero-photo{min-height:0;aspect-ratio:4/5}
+  .girl{object-position:50% 0}
   .stack{height:560px;max-width:380px}
   .n1{transform:translate(-50%,0) rotate(-4deg)}
   .n2{transform:translate(-50%,190px) rotate(2deg)}
@@ -230,7 +229,6 @@ footer{padding:72px 0 0;overflow:hidden}
   .track{animation:none;flex-wrap:nowrap;justify-content:center;width:100%}
   .group{gap:64px;padding-right:0}
   .track img{flex-shrink:0}
-  .hero-arrow path{stroke-dashoffset:0}
-  .hero-arrow .fill-lime{opacity:1}
+  .hero-arrow.light path{stroke-dashoffset:0}
   html{scroll-behavior:auto}
 }
