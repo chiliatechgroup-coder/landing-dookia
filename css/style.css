@@ -48,14 +48,14 @@ a{color:inherit;text-decoration:none}
   transition:background-color .2s ease,color .2s ease;
   white-space:nowrap;
 }
-.btn:hover{background:var(--dookia-lime);color:var(--ink)}
-.btn:active{background:#A9D63A;color:var(--ink)}
+.btn:hover{background:var(--hero-blue);color:#fff}
+.btn:active{background:#1273B8;color:#fff}
 .btn .ripple{position:absolute;width:14px;height:14px;border-radius:50%;background:rgba(255,255,255,.45);transform:translate(-50%,-50%) scale(0);opacity:1;pointer-events:none;animation:ripple .45s ease-out forwards}
 @keyframes ripple{to{transform:translate(-50%,-50%) scale(14);opacity:0}}
 .btn-small{padding:12px 24px;font-size:15px}
-.btn-lime{background:var(--dookia-lime);color:var(--ink)}
-.btn-lime:hover{background:var(--ink);color:#fff}
-.btn-lime:active{background:#000}
+.btn-lime{background:#0B1E36;color:#fff}
+.btn-lime:hover{background:var(--hero-blue);color:#fff}
+.btn-lime:active{background:#08233F;color:#fff}
 
 /* HERO */
 .hero{padding:32px 0 0;text-align:center;position:relative;overflow:clip}
