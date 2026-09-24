@@ -176,6 +176,10 @@ section.block.tint-blue{background:linear-gradient(to bottom,rgba(234,243,254,0)
 .v-lilac{background:var(--lilac-soft)}
 .v-lime{background:var(--lime-soft)}
 .v-white{background:#fff}
+/* Foto saindo do card — section 03 */
+.v-photo{background:transparent;border:0;flex-direction:column;justify-content:flex-end;aspect-ratio:auto;overflow:visible;padding:8px 0 0}
+.photo-group{width:min(100%,440px);height:auto;position:relative;z-index:1;margin-bottom:-56px}
+.photo-card{width:min(100%,360px)}
 
 .doc{
   width:280px;background:#fff;border:1.5px solid var(--ink);border-radius:18px;padding:22px;
@@ -259,6 +263,8 @@ footer{padding:72px 0 0;overflow:hidden}
   .proof-text{margin-left:0}
   .proof-arrow-desktop{display:none}
   .proof-arrow-mobile{display:block;width:140px;height:130px}
+  .v-photo{padding:0}
+  .photo-group{margin-bottom:-48px}
   .hero{padding:72px 0 0}
   .hero-split{grid-template-columns:1fr;gap:40px;text-align:center}
   .hero-copy{padding:0}
