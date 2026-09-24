@@ -156,7 +156,7 @@ section.block.tint-blue{background:linear-gradient(to bottom,rgba(234,243,254,0)
 .block.center .check{text-align:left}
 .index{
   display:inline-flex;align-items:center;
-  background:var(--low);border:0;border-radius:8px;
+  background:none;border:1px solid var(--line);border-radius:8px;
   padding:7px 14px;
   font-size:var(--text-caption);font-weight:600;letter-spacing:0;color:var(--muted);text-transform:none;
 }
