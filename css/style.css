@@ -141,6 +141,11 @@ section.block.tint-blue{background:linear-gradient(to bottom,rgba(234,243,254,0)
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center}
 .grid.rev > .copy{order:2}
 .grid.rev > .visual{order:1}
+/* PONTE 02 → 03 — rabisco alinhado ao texto da 02 */
+.proof-bridge{margin:-56px 0 -32px}
+.proof-bridge .wrap{display:flex;flex-direction:column;align-items:flex-end}
+.proof-text{font-size:var(--text-body);font-weight:600;color:var(--muted);transform:rotate(-3deg);margin-right:130px}
+.proof-arrow{width:110px;height:82px;transform:rotate(6deg);margin-right:48px;margin-top:-4px}
 /* TESTE section 03 — texto em cima, visual em baixo, tudo centrado */
 .block.center .grid{grid-template-columns:1fr;max-width:680px;margin:0 auto;text-align:center;gap:40px;justify-items:center}
 .block.center .copy p{margin-left:auto;margin-right:auto}
@@ -245,6 +250,10 @@ footer{padding:72px 0 0;overflow:hidden}
   .copy{text-align:center}
   .copy p{margin-left:auto;margin-right:auto}
   .copy .index{justify-content:center}
+  .proof-bridge{margin:-24px 0 -12px}
+  .proof-bridge .wrap{align-items:center}
+  .proof-text{margin-right:0}
+  .proof-arrow{margin-right:0;transform:rotate(0deg)}
   .hero{padding:72px 0 0}
   .hero-split{grid-template-columns:1fr;gap:40px;text-align:center}
   .hero-copy{padding:0}
