@@ -141,10 +141,10 @@ section.block.tint-blue{background:linear-gradient(to bottom,rgba(234,243,254,0)
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center}
 .grid.rev > .copy{order:2}
 .grid.rev > .visual{order:1}
-/* PONTE 02 → 03 — rabisco alinhado ao texto da 02 */
-.proof-bridge{margin:-48px 0 -100px;position:relative;z-index:1;pointer-events:none}
-.proof-bridge .wrap{display:flex;flex-direction:column;align-items:flex-end}
-.proof-text{font-size:var(--text-body);font-weight:400;font-style:italic;color:var(--muted);transform:rotate(-2deg);margin-right:150px}
+/* PONTE 02 → 03 — mesma coluna do título para a ponta acertar */
+.proof-bridge{margin:-20px 0 -70px;position:relative;z-index:1;pointer-events:none}
+.proof-bridge .wrap{max-width:680px;display:flex;flex-direction:column;align-items:center}
+.proof-text{font-size:var(--text-body);font-weight:400;font-style:italic;color:var(--muted);transform:rotate(-2deg);align-self:flex-end;margin-right:24px}
 .proof-arrow{width:250px;height:150px;margin-right:-10px;margin-top:-8px;overflow:visible}
 /* TESTE section 03 — texto em cima, visual em baixo, tudo centrado */
 .block.center .grid{grid-template-columns:1fr;max-width:680px;margin:0 auto;text-align:center;gap:40px;justify-items:center}
@@ -250,9 +250,9 @@ footer{padding:72px 0 0;overflow:hidden}
   .copy{text-align:center}
   .copy p{margin-left:auto;margin-right:auto}
   .copy .index{justify-content:center}
-  .proof-bridge{margin:-24px 0 -48px}
+  .proof-bridge{margin:-16px 0 -40px}
   .proof-bridge .wrap{align-items:center}
-  .proof-text{margin-right:0}
+  .proof-text{margin-right:0;align-self:center}
   .proof-arrow{width:150px;height:100px;margin-right:0}
   .hero{padding:72px 0 0}
   .hero-split{grid-template-columns:1fr;gap:40px;text-align:center}
