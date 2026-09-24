@@ -146,7 +146,9 @@ section.block.tint-blue{background:linear-gradient(to bottom,rgba(234,243,254,0)
 .proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:start}
 .proof-content{display:flex;flex-direction:column;align-items:flex-start}
 .proof-text{font-size:var(--text-body);font-weight:400;font-style:italic;color:var(--muted);transform:rotate(-2deg);margin-left:36px}
-.proof-arrow{width:240px;height:160px;margin-top:-4px;overflow:visible}
+.proof-arrow{width:220px;height:150px;margin-top:-4px;overflow:visible}
+.proof-arrow-mobile{display:none}
+.proof-arrow-desktop{display:block}
 /* TESTE section 03 — texto em cima, visual em baixo, tudo centrado */
 .block.center .grid{grid-template-columns:1fr;max-width:680px;margin:0 auto;text-align:center;gap:40px;justify-items:center}
 .block.center .copy p{margin-left:auto;margin-right:auto}
@@ -255,7 +257,8 @@ footer{padding:72px 0 0;overflow:hidden}
   .proof-grid{grid-template-columns:1fr;gap:0;justify-items:center}
   .proof-content{align-items:center}
   .proof-text{margin-left:0}
-  .proof-arrow{width:180px;height:120px}
+  .proof-arrow-desktop{display:none}
+  .proof-arrow-mobile{display:block;width:160px;height:130px}
   .hero{padding:72px 0 0}
   .hero-split{grid-template-columns:1fr;gap:40px;text-align:center}
   .hero-copy{padding:0}
