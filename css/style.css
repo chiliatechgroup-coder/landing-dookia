@@ -141,12 +141,12 @@ section.block.tint-blue{background:linear-gradient(to bottom,rgba(234,243,254,0)
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center}
 .grid.rev > .copy{order:2}
 .grid.rev > .visual{order:1}
-/* PONTE 02 → 03 — arco varrido no estilo do anexo 2 */
-.proof-bridge{margin:-10px 0 -85px;position:relative;z-index:2;pointer-events:none}
-.proof-bridge .wrap{max-width:680px;margin:0 auto;display:flex;justify-content:center}
-.proof-content{display:flex;flex-direction:column;align-items:flex-start;position:relative;margin-left:-80px}
-.proof-text{font-size:var(--text-body);font-weight:400;font-style:italic;color:var(--muted);transform:rotate(-2deg);margin-left:110px}
-.proof-arrow{width:280px;height:170px;margin-top:-6px;overflow:visible}
+/* PONTE 02 → 03 — alinhada à direita sob o texto da 02 */
+.proof-bridge{margin:-40px 0 -80px;position:relative;z-index:2;pointer-events:none}
+.proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:start}
+.proof-content{display:flex;flex-direction:column;align-items:flex-start}
+.proof-text{font-size:var(--text-body);font-weight:400;font-style:italic;color:var(--muted);transform:rotate(-2deg);margin-left:36px}
+.proof-arrow{width:240px;height:160px;margin-top:-4px;overflow:visible}
 /* TESTE section 03 — texto em cima, visual em baixo, tudo centrado */
 .block.center .grid{grid-template-columns:1fr;max-width:680px;margin:0 auto;text-align:center;gap:40px;justify-items:center}
 .block.center .copy p{margin-left:auto;margin-right:auto}
@@ -251,10 +251,11 @@ footer{padding:72px 0 0;overflow:hidden}
   .copy{text-align:center}
   .copy p{margin-left:auto;margin-right:auto}
   .copy .index{justify-content:center}
-  .proof-bridge{margin:-10px 0 -50px}
-  .proof-content{margin-left:0;align-items:center}
+  .proof-bridge{margin:-20px 0 -40px}
+  .proof-grid{grid-template-columns:1fr;gap:0;justify-items:center}
+  .proof-content{align-items:center}
   .proof-text{margin-left:0}
-  .proof-arrow{width:210px;height:130px}
+  .proof-arrow{width:180px;height:120px}
   .hero{padding:72px 0 0}
   .hero-split{grid-template-columns:1fr;gap:40px;text-align:center}
   .hero-copy{padding:0}
