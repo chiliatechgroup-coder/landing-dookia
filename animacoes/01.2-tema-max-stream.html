@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dookia — Animação 01.2 · Novo → Max → Stream académico</title>
+<link rel="stylesheet" href="shared.css">
+<style>
+.opener{min-height:420px;display:flex;align-items:center;justify-content:center;transition:opacity .25s var(--ease-out)}
+.opener.gone{opacity:0;pointer-events:none;position:absolute;inset:0}
+.pill-new{border:0;cursor:default;background:var(--ink);color:#fff;font-family:inherit;font-weight:600;font-size:17px;padding:18px 38px;border-radius:999px}
+.card{position:relative;background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 40px 80px -40px rgba(26,25,29,.25);opacity:0;transform:scale(.94);transition:opacity .45s var(--ease-spring),transform .45s var(--ease-spring)}
+.card.in{opacity:1;transform:none}
+.card.out{opacity:0;transform:scale(.97);transition:opacity .25s var(--ease-out),transform .25s var(--ease-out)}
+.maxbar{display:flex;align-items:center;gap:10px;padding:16px 22px;border-bottom:1px solid var(--line);font-weight:800;font-size:16px;letter-spacing:-.01em}
+.maxbar svg{flex-shrink:0}
+.maxbar .max{background:var(--lime);border:1.5px solid var(--ink);font-size:11px;font-weight:800;padding:2px 8px;border-radius:999px;letter-spacing:.06em}
+.cbody{padding:24px 22px;display:flex;flex-direction:column;gap:14px;min-height:340px}
+.rise{opacity:0;transform:translateY(12px);transition:opacity .4s var(--ease-out),transform .4s var(--ease-spring)}
+.rise.in{opacity:1;transform:none}
+.q{font-size:15px;font-weight:700}
+.input{border:1.5px solid var(--ink);border-radius:14px;padding:14px 16px;font-size:16px;min-height:56px}
+.cta{position:relative;border:0;background:var(--ink);color:#fff;font-family:inherit;font-weight:600;font-size:16px;padding:15px;border-radius:999px}
+.touch{position:absolute;width:44px;height:44px;border-radius:50%;border:2.5px solid var(--ink);transform:translate(-50%,-50%) scale(.4);opacity:0;pointer-events:none}
+.touch.go{transition:transform .5s var(--ease-spring),opacity .5s var(--ease-out);transform:translate(-50%,-50%) scale(1.15);opacity:0}
+.loading{display:none;align-items:center;gap:12px;color:var(--muted);font-size:15px;font-weight:500}
+.loading.on{display:flex}
+.paper{display:none;flex-direction:column;gap:12px;background:var(--low);border:1px solid var(--line);border-radius:14px;padding:20px;opacity:0;transition:opacity .25s var(--ease-out)}
+.paper.on{display:flex;opacity:1}
+.paper h4{font-size:17px;letter-spacing:-.01em}
+.paper p{font-size:14px;line-height:1.6;color:#3A3740}
+.paper ul{list-style:none;display:flex;flex-direction:column;gap:8px;margin-top:2px}
+.paper li{font-size:14px;line-height:1.5;color:#3A3740;padding-left:22px;position:relative;opacity:0;transform:translateY(8px);transition:opacity .3s var(--ease-out),transform .3s var(--ease-spring)}
+.paper li.in{opacity:1;transform:none}
+.paper li::before{content:"";position:absolute;left:4px;top:.55em;width:7px;height:7px;border-radius:50%;background:var(--lime);border:1.5px solid var(--ink)}
+.stream-caret{display:inline-block;width:8px;height:1em;background:var(--ink);vertical-align:-1px;animation:blink 1s steps(1) infinite}
+@media (prefers-reduced-motion:reduce){
+  .card,.rise,.paper,.paper li{transition:none;opacity:1;transform:none}
+  .stream-caret,.touch{animation:none}
+}
+</style>
+</head>
+<body>
+<div class="stage" id="stage" style="position:relative">
+  <div class="opener" id="opener">
+    <button class="pill-new" id="novo">+ Novo trabalho</button>
+  </div>
+  <div class="card" id="card">
+    <div class="maxbar">
+      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+        <path d="M13 3c-2.5 0-4 1.8-4.6 3.4C6.8 6.6 5 8.2 5 10.6c0 1.9 1.3 3.3 2.9 3.7-.3 2.5 1.4 5.7 5.1 5.7s5.4-3.2 5.1-5.7c1.6-.4 2.9-1.8 2.9-3.7 0-2.4-1.8-4-3.4-4.2C17 4.8 15.5 3 13 3Z" stroke="#1A191D" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M13 3v17M9 8.5c1 1 2.4 1.4 4 1.4s3-.4 4-1.4M9.5 14.5c1 .8 2.2 1.2 3.5 1.2s2.5-.4 3.5-1.2" stroke="#1A191D" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      Dookia <span class="max">MAX</span>
+    </div>
+    <div class="cbody" id="cbody">
+      <p class="q rise">Que trabalho vamos fazer hoje?</p>
+      <div class="input rise"><span id="typed"></span><span class="caret" id="caret"></span></div>
+      <button class="cta rise" id="cta">Criar trabalho</button>
+      <div class="loading" id="loading"><span class="spin"></span>A gerar…</div>
+      <div class="paper" id="paper">
+        <h4><span id="ahead"></span></h4>
+        <p><span id="abody"></span></p>
+        <ul id="alist"></ul>
+        <span class="stream-caret"></span>
+      </div>
+    </div>
+  </div>
+  <p class="hint">Animação 01.2 · loop de 8s · novo → max → stream académico</p>
+</div>
+<script src="shared.js"></script>
+<script>
+const THEME = "Revolução Industrial";
+const HEAD = "Revolução Industrial";
+const BODY = "Entre os séculos XVIII e XIX, a mecanização transformou a produção e a sociedade europeia.";
+const BULLETS = ["Máquina a vapor e tear mecânico","Crescimento das cidades industriais","Novas relações de trabalho"];
+const $ = id => document.getElementById(id);
+
+async function loop(){
+  const opener=$('opener'), card=$('card'), rises=[...document.querySelectorAll('.rise')],
+        typed=$('typed'), caret=$('caret'), cta=$('cta'), stage=$('stage'),
+        loading=$('loading'), paper=$('paper'), ahead=$('ahead'),
+        abody=$('abody'), alist=$('alist');
+  while(true){
+    // reset
+    card.classList.remove('in','out');
+    opener.classList.remove('gone');
+    rises.forEach(r=>r.classList.remove('in'));
+    typed.textContent=""; ahead.textContent=""; abody.textContent=""; alist.innerHTML="";
+    caret.style.display=""; loading.classList.remove('on'); paper.classList.remove('on');
+    await wait(600);
+    // toque no + Novo trabalho → morph em card
+    await touchAt($('novo'), stage);
+    opener.classList.add('gone');
+    card.classList.add('in');
+    await wait(450);
+    // stagger dos elementos
+    for(const r of rises){ r.classList.add('in'); await wait(90); }
+    await wait(300);
+    await typeInto(typed, THEME, 11);
+    caret.style.display="none";
+    await wait(350);
+    // toque no CTA sem mudar cor → loading
+    await touchAt(cta, card);
+    loading.classList.add('on');
+    await wait(1150);
+    loading.classList.remove('on');
+    // crossfade corpo → papel académico
+    document.querySelectorAll('#cbody > .rise').forEach(r=>r.classList.remove('in'));
+    await wait(220);
+    paper.classList.add('on');
+    await typeInto(ahead, HEAD, 30);
+    await streamInto(abody, BODY, 30);
+    for(const b of BULLETS){
+      const li = document.createElement('li');
+      li.textContent = b;
+      alist.appendChild(li);
+      await wait(60);
+      li.classList.add('in');
+      await wait(180);
+    }
+    await wait(900);
+    card.classList.add('out');
+    await wait(350);
+  }
+}
+if(reduceMotion){
+  $('opener').style.display="none";
+  const card=$('card'); card.classList.add('in');
+  document.querySelectorAll('.rise').forEach(r=>r.classList.add('in'));
+  $('typed').textContent=THEME; $('caret').style.display="none";
+  document.querySelectorAll('#cbody > .rise').forEach(r=>r.classList.remove('in'));
+  $('paper').classList.add('on');
+  $('ahead').textContent=HEAD; $('abody').textContent=BODY;
+  BULLETS.forEach(b=>{ const li=document.createElement('li'); li.textContent=b; li.classList.add('in'); $('alist').appendChild(li); });
+}else{ loop(); }
+</script>
+</body>
+</html>

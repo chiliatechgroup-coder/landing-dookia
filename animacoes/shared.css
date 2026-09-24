@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap');
+
+:root{
+  --lime:#CCF766; --lilac:#F2C7F5; --ink:#1A191D; --muted:#625A69;
+  --surface:#FFFBFF; --low:#F7F2F7; --line:#E9E2F0;
+  --ease-out:cubic-bezier(0.23,1,0.32,1);
+  --ease-spring:cubic-bezier(0.32,0.72,0,1);
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{font-family:'Figtree',system-ui,sans-serif;background:var(--low);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:32px;color:var(--ink)}
+.stage{width:min(560px,100%)}
+.hint{text-align:center;margin-top:18px;font-size:13px;color:var(--muted)}
+.caret{display:inline-block;width:2px;height:1.1em;background:var(--ink);vertical-align:-2px;margin-left:1px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.spin{width:20px;height:20px;border-radius:50%;border:2.5px solid var(--line);border-top-color:var(--ink);animation:spin .7s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){
+  .caret,.spin{animation:none}
+}
