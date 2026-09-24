@@ -145,7 +145,7 @@ section.block.tint-blue{background:linear-gradient(to bottom,rgba(234,243,254,0)
 .proof-bridge{margin:-20px 0 -70px;position:relative;z-index:1;pointer-events:none}
 .proof-bridge .wrap{max-width:680px;display:flex;flex-direction:column;align-items:center}
 .proof-text{font-size:var(--text-body);font-weight:400;font-style:italic;color:var(--muted);transform:rotate(-2deg);align-self:flex-end;margin-right:24px}
-.proof-arrow{width:250px;height:150px;margin-right:-10px;margin-top:-8px;overflow:visible}
+.proof-arrow{width:250px;height:170px;margin-top:-10px;overflow:visible}
 /* TESTE section 03 — texto em cima, visual em baixo, tudo centrado */
 .block.center .grid{grid-template-columns:1fr;max-width:680px;margin:0 auto;text-align:center;gap:40px;justify-items:center}
 .block.center .copy p{margin-left:auto;margin-right:auto}
