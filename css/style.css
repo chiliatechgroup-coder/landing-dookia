@@ -195,6 +195,23 @@ section.block.tint-blue{background:linear-gradient(to bottom,rgba(234,243,254,0)
 
 .line-svg{width:220px;height:220px}
 
+/* FAQ */
+.faq{padding:120px 0}
+.faq-head{text-align:center}
+.faq-head h2{font-size:var(--text-h2);line-height:var(--leading-heading);letter-spacing:-.02em;margin:20px auto 0;font-weight:600}
+.faq-head > p{color:var(--muted);font-size:var(--text-body);line-height:var(--leading-body);margin:16px auto 0;max-width:44ch}
+.faq-list{max-width:720px;margin:40px auto 0;display:grid;gap:12px;text-align:left}
+.faq-item{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.faq-item summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 22px;font-weight:600;font-size:17px;letter-spacing:-.01em}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary span{width:28px;height:28px;flex-shrink:0;border-radius:50%;border:1.5px solid var(--ink);display:inline-flex;align-items:center;justify-content:center;background:#fff;position:relative}
+.faq-item summary span::before,.faq-item summary span::after{content:"";position:absolute;background:var(--ink);border-radius:2px}
+.faq-item summary span::before{width:12px;height:2px}
+.faq-item summary span::after{width:2px;height:12px}
+.faq-item[open] summary span{background:var(--dookia-lime)}
+.faq-item[open] summary span::after{display:none}
+.faq-item p{padding:0 22px 20px;color:var(--muted);font-size:var(--text-body);line-height:var(--leading-body)}
+
 /* CLOSE */
 .close{padding:160px 0 120px;text-align:center}
 .close h2{font-size:var(--text-h2-close);letter-spacing:-.025em;line-height:var(--leading-heading);font-weight:600;max-width:16ch;margin:0 auto}
@@ -248,6 +265,9 @@ footer{padding:72px 0 0;overflow:hidden}
   .stack:hover .n1{transform:translate(-50%,0) rotate(-4deg)}
   .stack:hover .n3{transform:translate(-50%,370px) rotate(-2deg)}
   .ncard{width:320px}
+  .faq{padding:80px 0}
+  .faq-item summary{font-size:16px;padding:18px}
+  .faq-item p{padding:0 18px 18px}
   .close{padding:100px 0 80px}
   .track img{height:28px}
   .group{gap:60px;padding-right:60px}
