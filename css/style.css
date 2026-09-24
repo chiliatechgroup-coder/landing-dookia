@@ -224,6 +224,9 @@ footer{padding:72px 0 0;overflow:hidden}
   .grid{grid-template-columns:1fr;gap:40px}
   .grid.rev > .copy{order:1}
   .grid.rev > .visual{order:2}
+  .copy{text-align:center}
+  .copy p{margin-left:auto;margin-right:auto}
+  .copy .index{justify-content:center}
   .hero{padding:72px 0 0}
   .hero-split{grid-template-columns:1fr;gap:40px;text-align:center}
   .hero-copy{padding:0}
