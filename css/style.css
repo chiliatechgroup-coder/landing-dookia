@@ -176,18 +176,6 @@ section.block.tint-blue{background:linear-gradient(to bottom,rgba(234,243,254,0)
 .v-lilac{background:var(--lilac-soft)}
 .v-lime{background:var(--lime-soft)}
 .v-white{background:#fff}
-/* Foto em card portrait com pop-out e mini card overlay — section 03 */
-.v-photo{background:transparent;border:0;aspect-ratio:auto;overflow:visible;padding:24px 0 0}
-.photo-card-frame{position:relative;width:min(100%,340px);margin:0 auto;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding-top:32px}
-.photo-card-bg{position:absolute;bottom:12px;left:0;right:0;top:44px;background:linear-gradient(135deg,var(--lilac-soft) 0%,#E6DAF7 100%);border-radius:28px;border:1px solid var(--line);box-shadow:0 20px 40px -15px rgba(26,25,29,.12);z-index:0}
-.photo-group-img{position:relative;z-index:1;width:100%;height:auto;object-fit:contain;filter:drop-shadow(0 10px 20px rgba(26,25,29,.1))}
-.photo-overlay-card{position:absolute;bottom:-12px;z-index:2;width:calc(100% - 24px);background:var(--ink);color:#fff;border-radius:18px;padding:12px 14px;box-shadow:0 16px 32px -8px rgba(26,25,29,.3);border:1px solid rgba(255,255,255,.1);text-align:left}
-.photo-overlay-top{display:flex;align-items:center;gap:8px;margin-bottom:8px}
-.photo-overlay-dot{width:8px;height:8px;border-radius:50%;background:var(--dookia-lime);flex-shrink:0}
-.photo-overlay-title{font-size:13.5px;font-weight:700;color:#fff;letter-spacing:-.01em}
-.photo-overlay-bottom{display:flex;align-items:center;justify-content:space-between;gap:8px;background:rgba(255,255,255,.08);border-radius:10px;padding:8px 10px;font-size:12px;color:#CFC9D6}
-.photo-overlay-tag{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:500}
-.photo-overlay-badge{background:var(--dookia-lime);color:var(--ink);font-weight:700;font-size:11px;padding:3px 8px;border-radius:999px;flex-shrink:0}
 
 .doc{
   width:280px;background:#fff;border:1.5px solid var(--ink);border-radius:18px;padding:22px;
@@ -271,8 +259,6 @@ footer{padding:72px 0 0;overflow:hidden}
   .proof-text{margin-left:0}
   .proof-arrow-desktop{display:none}
   .proof-arrow-mobile{display:block;width:140px;height:130px}
-  .v-photo{padding:16px 0 0}
-  .photo-card-frame{width:min(100%,300px)}
   .hero{padding:72px 0 0}
   .hero-split{grid-template-columns:1fr;gap:40px;text-align:center}
   .hero-copy{padding:0}
