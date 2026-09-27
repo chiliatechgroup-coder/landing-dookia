@@ -204,10 +204,10 @@ section.block.tint-blue{background:linear-gradient(to bottom,rgba(234,243,254,0)
 .line-svg{width:220px;height:220px}
 
 /* Escolha Individual / Grupo — section 04 */
-.choice-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:760px;margin:44px auto 0;text-align:left}
-.choice-card{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:12px;background:#fff;border:1px solid var(--line);border-radius:var(--radius-md);padding:28px 28px 80px;transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
-.choice-card.group{background:var(--lime-soft)}
-.choice-card:hover{transform:translateY(-4px);box-shadow:0 24px 48px -24px rgba(26,25,29,.25)}
+.choice-stack{display:grid;gap:20px;align-content:center}
+.choice-card{position:relative;display:flex;flex-direction:column;align-items:flex-start;text-align:left;gap:12px;background:var(--lilac-soft);border:1px solid var(--line);border-radius:var(--radius-md);padding:28px 28px 80px;transition:border-color .2s ease,background-color .2s ease}
+.choice-card.group{background:var(--blue-soft)}
+.choice-card:hover{border-color:var(--ink)}
 .choice-icon{width:48px;height:48px;border-radius:50%;border:1.5px solid var(--ink);background:#fff;color:var(--ink);display:inline-flex;align-items:center;justify-content:center}
 .choice-card.group .choice-icon{background:var(--dookia-lime)}
 .choice-icon svg{width:22px;height:22px}
@@ -272,7 +272,7 @@ footer{padding:72px 0 0;overflow:hidden}
   .proof-text{margin-left:0}
   .proof-arrow-desktop{display:none}
   .proof-arrow-mobile{display:block;width:140px;height:130px}
-  .choice-grid{grid-template-columns:1fr;max-width:480px;margin-top:36px}
+  .choice-stack{max-width:480px;margin:0 auto;width:100%}
   .choice-card{padding:24px 24px 76px}
   .hero{padding:72px 0 0}
   .hero-split{grid-template-columns:1fr;gap:40px;text-align:center}
