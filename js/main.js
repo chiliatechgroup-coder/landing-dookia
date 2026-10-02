@@ -36,8 +36,9 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   async function downloadToast(){
     dl.classList.add('pulse');await sleep(550);dl.classList.remove('pulse');
     toast.classList.add('on');
-    for(let p=0;p<=100;p+=4){tfill.style.width=p+'%';tsub.textContent=(1.6*p/100).toFixed(1).replace('.',',')+' MB de 1,6 MB';await sleep(48);}
-    tsub.textContent='Guardado ✓ · 1,6 MB';
+    const NBSP='\u00A0';
+    for(let p=0;p<=100;p+=4){tfill.style.width=p+'%';tsub.textContent=(1.6*p/100).toFixed(1).replace('.',',')+NBSP+'MB de 1,6'+NBSP+'MB';await sleep(48);}
+    tsub.textContent='Guardado ✓ · 1,6'+NBSP+'MB';
     await sleep(1500);toast.classList.remove('on');await sleep(400);tfill.style.width='0';
   }
   async function cycle(){
@@ -69,6 +70,17 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   }
   const sio=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){sio.disconnect();setTimeout(cycle,400);}});},{threshold:.25});
   sio.observe(demo);
+})();
+
+// Marquee pause toggle — autoplay >5s precisa de controle keyboard/touch
+(function(){
+  const mq=document.getElementById('marquee'),btn=document.getElementById('marqueeToggle');
+  if(!mq||!btn)return;
+  btn.addEventListener('click',()=>{
+    const paused=mq.classList.toggle('paused');
+    btn.setAttribute('aria-pressed',String(paused));
+    btn.textContent=paused?'Retomar logos':'Pausar logos';
+  });
 })();
 
 // Gota de água nos botões — nasce no ponto do toque
