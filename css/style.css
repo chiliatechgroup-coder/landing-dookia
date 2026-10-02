@@ -128,7 +128,7 @@ h1{
 .trust-cap{font-size:var(--text-caption);font-weight:700;letter-spacing:.02em;color:rgba(26,25,29,.55)}
 .marquee{overflow:hidden;max-width:var(--max);margin:30px auto 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
 .track{display:flex;align-items:center;width:max-content;animation:marquee 25s linear infinite}
-.group{display:flex;align-items:center;gap:96px;padding-right:96px;flex-shrink:0}
+.track .group{display:flex;align-items:center;gap:96px;padding-right:96px;flex-shrink:0}
 .track img{height:32px;width:auto;filter:grayscale(1);opacity:.55}
 .marquee:hover .track{animation-play-state:paused}
 @keyframes marquee{to{transform:translateX(-50%)}}
@@ -263,7 +263,7 @@ section.block.tint-blue{background:linear-gradient(to bottom,rgba(234,243,254,0)
 .choice .choice-stack{grid-template-columns:repeat(2,1fr);width:100%;align-content:start}
 .choice-card{display:flex;flex-direction:column;align-items:center;text-align:center;gap:0;background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px 22px}
 .choice-icon{width:52px;height:52px;border-radius:50%;background:var(--lilac-soft);color:var(--ink);display:inline-flex;align-items:center;justify-content:center}
-.choice-card.group .choice-icon{background:var(--blue-soft)}
+.choice-card.choice-group .choice-icon{background:var(--blue-soft)}
 .choice-icon svg{width:24px;height:24px}
 .choice-card strong{font-size:17px;letter-spacing:-.01em;margin:16px 0 6px}
 .choice-card p{color:var(--muted);font-size:14px;line-height:1.6;margin:0;max-width:30ch}
@@ -356,13 +356,13 @@ footer{padding:72px 0 0;overflow:hidden}
   .faq-item p{padding:0 18px 18px}
   .close{padding:100px 0 80px}
   .track img{height:28px}
-  .group{gap:60px;padding-right:60px}
+  .track .group{gap:60px;padding-right:60px}
 }
 @media (prefers-reduced-motion:reduce){
   *{transition:none!important;animation:none!important}
   .reveal{opacity:1;transform:none}
   .track{animation:none;flex-wrap:nowrap;justify-content:center;width:100%}
-  .group{gap:64px;padding-right:0}
+  .track .group{gap:64px;padding-right:0}
   .track img{flex-shrink:0}
   .btn .ripple{display:none}
   html{scroll-behavior:auto}
