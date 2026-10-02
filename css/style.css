@@ -145,7 +145,7 @@ section.block.tint-blue{background:linear-gradient(to bottom,rgba(234,243,254,0)
 .proof-bridge{margin:-40px 0 -80px;position:relative;z-index:2;pointer-events:none}
 .proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:start}
 .proof-content{display:flex;flex-direction:column;align-items:flex-start}
-.proof-text{font-family:'Caveat',cursive;font-size:27px;font-weight:500;color:var(--ink);transform:rotate(-2deg);margin-left:36px}
+.proof-text{font-family:'Caveat',cursive;font-size:27px;font-weight:500;color:var(--muted);transform:rotate(-2deg);margin-left:36px}
 .proof-arrow{width:180px;height:160px;margin-top:-4px;overflow:visible}
 .proof-arrow-mobile{display:none}
 .proof-arrow-desktop{display:block}
@@ -253,12 +253,10 @@ section.block.tint-blue{background:linear-gradient(to bottom,rgba(234,243,254,0)
 .hl{background:var(--dookia-lime);color:var(--ink);padding:0 .14em;border-radius:5px;display:inline-block;transform:rotate(-1deg)}
 .visual.s2-photo{background:none;border:0;overflow:visible;aspect-ratio:auto;display:block}
 .s2-img{width:100%;height:auto;display:block;border-radius:24px;border:1px solid var(--line)}
-.s2-note{position:absolute;font-family:'Caveat',cursive;font-size:27px;font-weight:500;color:var(--ink);display:flex;flex-direction:column;line-height:1.1;white-space:nowrap}
+.s2-note{position:absolute;font-family:'Caveat',cursive;font-size:27px;font-weight:500;color:var(--muted);display:flex;flex-direction:column;line-height:1.1;white-space:nowrap}
 .s2-note svg{width:52px;height:70px;overflow:visible}
 .s2-n1{top:-118px;left:-4px;transform:rotate(-3deg)}
 .s2-n1 svg{margin:-2px 0 0 30px}
-.s2-n2{bottom:-112px;left:28px;transform:rotate(2deg)}
-.s2-n2 svg{margin:0 0 -4px 8px}
 
 /* Escolha Individual / Grupo — section 04 */
 .choice-stack{display:grid;gap:20px;align-content:center}
