@@ -261,15 +261,12 @@ section.block.tint-blue{background:linear-gradient(to bottom,rgba(234,243,254,0)
 /* Escolha Individual / Grupo — section 04 */
 .choice-stack{display:grid;gap:20px;align-content:center}
 .choice .choice-stack{grid-template-columns:repeat(2,1fr);grid-auto-rows:1fr;width:100%}
-.choice-card{position:relative;display:flex;flex-direction:column;align-items:flex-start;text-align:left;gap:12px;background:var(--lilac-soft);border:1px solid var(--line);border-radius:var(--radius-md);padding:28px;transition:border-color .2s ease,background-color .2s ease}
+.choice-card{display:flex;flex-direction:column;align-items:flex-start;text-align:left;gap:12px;background:var(--lilac-soft);border:1px solid var(--line);border-radius:var(--radius-md);padding:28px}
 .choice-card.group{background:var(--blue-soft)}
-.choice-card:hover{border-color:var(--ink)}
 .choice-icon{width:48px;height:48px;border-radius:50%;border:1.5px solid var(--ink);background:#fff;color:var(--ink);display:inline-flex;align-items:center;justify-content:center}
 .choice-icon svg{width:22px;height:22px}
 .choice-card strong{font-size:20px;letter-spacing:-.01em}
 .choice-card p{color:var(--muted);font-size:var(--text-body);line-height:var(--leading-body);margin:0}
-.choice-arrow{position:absolute;top:20px;right:20px;width:36px;height:36px;border:1px solid var(--line);border-radius:50%;background:transparent;color:var(--muted);display:inline-flex;align-items:center;justify-content:center}
-.choice-arrow svg{width:16px;height:16px}
 
 /* FAQ */
 .faq{padding:120px 0}
