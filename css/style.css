@@ -260,7 +260,7 @@ section.block.tint-blue{background:linear-gradient(to bottom,rgba(234,243,254,0)
 
 /* Escolha Individual / Grupo — section 04 */
 .choice-stack{display:grid;gap:20px;align-content:center}
-.choice .choice-stack{grid-template-columns:repeat(2,1fr);grid-auto-rows:1fr;width:100%}
+.choice .choice-stack{grid-template-columns:repeat(2,1fr);width:100%;align-content:start}
 .choice-card{display:flex;flex-direction:column;align-items:center;text-align:center;gap:0;background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px 22px}
 .choice-icon{width:52px;height:52px;border-radius:50%;background:var(--lilac-soft);color:var(--ink);display:inline-flex;align-items:center;justify-content:center}
 .choice-card.group .choice-icon{background:var(--blue-soft)}
