@@ -28,17 +28,6 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
     tfill=document.getElementById('s1tfill'),tsub=document.getElementById('s1tsub'),
     tname=document.getElementById('s1tname'),field=document.getElementById('s1field');
   tname.textContent=TOPIC+'.pdf';
-  const fit=document.getElementById('s1fit');
-  const mq=matchMedia('(max-width: 960px)');
-  function fitDemo(){
-    if(mq.matches){demo.style.transform='';fit.style.width='';fit.style.height='';return;}
-    const box=fit.parentElement;
-    const availW=box.clientWidth-28, availH=box.clientHeight-28;
-    const nw=demo.offsetWidth||300, nh=demo.offsetHeight||460;
-    const s=Math.max(.4,Math.min(1,availW/nw,availH/nh));
-    demo.style.transform='scale('+s+')';
-    fit.style.width=(nw*s)+'px';fit.style.height=(nh*s)+'px';
-  }
   bul.innerHTML=BULLETS.map(b=>'<li>'+b.replace(/\(([^)]+,\s*\d{4}[^)]*)\)/g,'<span class="s1-cite">($1)</span>')+'</li>').join('');
   async function stream(el,text){const w=text.split(' ');for(let i=0;i<w.length;i++){el.textContent=w.slice(0,i+1).join(' ');await sleep(32);}}
   function showForm(){topTitle.textContent='Novo Trabalho';spin.classList.remove('on');dl.classList.remove('on','pulse');}
@@ -68,10 +57,6 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
     for(const li of bul.querySelectorAll('li')){li.classList.add('on');await sleep(200);}
     await sleep(500);await downloadToast();await sleep(900);cycle();
   }
-  fitDemo();
-  new ResizeObserver(fitDemo).observe(fit.parentElement);
-  mq.addEventListener('change',fitDemo);
-  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fitDemo);
   if(reduce){
     typed.textContent=TOPIC;form.classList.remove('on');doc.classList.add('on');
     showDoc();dtitle.textContent=TOPIC;dintro.textContent=INTRO;
