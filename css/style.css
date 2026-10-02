@@ -249,6 +249,17 @@ section.block.tint-blue{background:linear-gradient(to bottom,rgba(234,243,254,0)
 .line-svg{width:220px;height:220px}
 .visual-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%}
 
+/* S2 — foto solta + marca-texto + rabiscos */
+.hl{background:var(--dookia-lime);color:var(--ink);padding:0 .14em;border-radius:5px;display:inline-block;transform:rotate(-1deg)}
+.visual.s2-photo{background:none;border:0;overflow:visible;aspect-ratio:auto;display:block}
+.s2-img{width:100%;height:auto;display:block;border-radius:24px;border:1px solid var(--line);box-shadow:0 30px 60px -30px rgba(26,25,29,.28)}
+.s2-note{position:absolute;font-family:'Caveat',cursive;font-size:27px;font-weight:500;color:var(--ink);display:flex;flex-direction:column;line-height:1;white-space:nowrap}
+.s2-note svg{width:52px;height:72px;overflow:visible}
+.s2-n1{top:-92px;left:-6px;transform:rotate(-4deg)}
+.s2-n1 svg{margin:-4px 0 0 34px}
+.s2-n2{bottom:-84px;left:34px;transform:rotate(2deg)}
+.s2-n2 svg{margin:-6px 0 0 6px;transform:scaleX(-1)}
+
 /* Escolha Individual / Grupo — section 04 */
 .choice-stack{display:grid;gap:20px;align-content:center}
 .choice-card{display:flex;flex-direction:column;align-items:flex-start;text-align:left;gap:12px;background:var(--lilac-soft);border:1px solid var(--line);border-radius:var(--radius-md);padding:28px;transition:border-color .2s ease,background-color .2s ease}
@@ -322,6 +333,7 @@ footer{padding:72px 0 0;overflow:hidden}
   .visual.s1-visual{aspect-ratio:auto;padding:22px 14px}
   .s1-phone{height:auto}
   .s1-body{flex:none;height:430px}
+  .s2-note{display:none}
   .hero{padding:72px 0 0}
   .hero-split{grid-template-columns:1fr;gap:40px;text-align:center}
   .hero-copy{padding:0}
