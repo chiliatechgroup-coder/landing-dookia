@@ -49,7 +49,12 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
     typed.innerHTML='';field.classList.add('typing');
     for(let i=1;i<=TOPIC.length;i++){typed.textContent=TOPIC.slice(0,i);await sleep(rnd(20,50));}
     await sleep(380);
-    cta.classList.add('loading');showThink();await sleep(900);
+    cta.classList.add('press');
+    await sleep(150);
+    cta.classList.remove('press');
+    cta.classList.add('loading');
+    showThink();
+    await sleep(900);
     cta.classList.remove('loading');
     form.classList.remove('on');doc.classList.add('on');showDoc();
     await sleep(320);dtitle.textContent=TOPIC;await sleep(160);
