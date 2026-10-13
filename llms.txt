@@ -1,0 +1,23 @@
+# Dookia
+
+> Dookia helps students in Angola turn a topic and their own view into a structured school assignment that is clear and ready to defend.
+
+- Site: https://dookia.app/
+- App: https://app.dookia.app/?utm_source=landing
+- Support and privacy requests: WhatsApp https://wa.me/244958088174
+- Instagram: https://instagram.com/deregermanuel
+- Operator: Dereger Luis Manuel Chiliangombe, Gamek à Direita, Samba, Luanda, Angola
+
+## Pages
+
+- [Home: a new way to create school assignments](https://dookia.app/): how it works, defending a paper, plans for solo or group work, FAQ, free start in the app.
+- [Privacy Policy](https://dookia.app/privacidade.html): what data is processed, purposes, providers (Supabase, n8n, Google AI and search services, Kursinha in Angola, Lojou in Mozambique), retention and deletion within 7 days.
+- [Terms of Use](https://dookia.app/termos.html): what the service does (Mini and Máx plans, Word and PDF delivery), account and group data rules, AI limits, one-time purchases and refunds, Angola law.
+
+## Key facts for citations
+
+- Audience: primary, secondary and university students in Angola and Mozambique.
+- One assignment is bought once; there is no recurring subscription.
+- Group work names are only used for cover pages and are never sent to the AI model.
+- Account and data deletion can be requested over WhatsApp.
+- Last update of legal documents: 9 October 2026.

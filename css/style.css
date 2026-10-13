@@ -349,6 +349,8 @@ footer{padding:72px 0 0;overflow:hidden}
 }
 
 :focus-visible{outline:3px solid var(--dookia-lime);outline-offset:3px;border-radius:8px}
+.skip{position:absolute;left:16px;top:-64px;background:var(--ink);color:#fff;font-weight:600;font-size:var(--text-faq-a);padding:12px 20px;border-radius:999px;z-index:100;transition:top .2s var(--ease-out)}
+.skip:focus{top:12px}
 
 @media (max-width:1180px){
   .hero-split{gap:40px}
