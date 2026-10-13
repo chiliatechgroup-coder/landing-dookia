@@ -1,7 +1,18 @@
-const io = new IntersectionObserver((es)=>{
-  es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
-},{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+// Reveal calmo — stagger 0/100/200ms por grupo
+(function(){
+  const css=getComputedStyle(document.documentElement);
+  const step=parseInt(css.getPropertyValue('--reveal-step'))||100,maxDelay=parseInt(css.getPropertyValue('--reveal-max'))||200;
+  document.querySelectorAll('.choice-stack,.grid,.faq-head,.close .wrap').forEach(group=>{
+    group.querySelectorAll(':scope > .reveal').forEach((el,i)=>el.style.setProperty('--d',Math.min(i*step,maxDelay)+'ms'));
+  });
+  document.querySelectorAll('.faq-list').forEach(list=>{
+    list.querySelectorAll(':scope > .reveal').forEach((el,i)=>el.style.setProperty('--d',Math.min(i*step,maxDelay)+'ms'));
+  });
+  const io=new IntersectionObserver(es=>{
+    es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:.15,rootMargin:'0px 0px -10% 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+})();
 
 // S1 live — Novo Trabalho + spinner + Resumo + toast (v3 port)
 (function(){
@@ -69,6 +80,32 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   }
   const sio=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){sio.disconnect();setTimeout(cycle,400);}});},{threshold:.25});
   sio.observe(demo);
+})();
+
+// FAQ — um aberto por vez (fallback para browsers sem name="faq")
+document.querySelectorAll('.faq-item').forEach(item=>{
+  item.addEventListener('toggle',()=>{
+    if(item.open)document.querySelectorAll('.faq-item').forEach(o=>{if(o!==item)o.open=false;});
+  });
+});
+
+// Scroll com inércia subtil (ao largar, continua um pouco) — só desktop
+(function(){
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const fine=matchMedia('(hover:hover) and (pointer:fine)').matches;
+  if(reduce||!fine||typeof Lenis==='undefined')return;
+  const css=getComputedStyle(document.documentElement);
+  const lerp=parseFloat(css.getPropertyValue('--scroll-lerp'))||.09;
+  const lenis=new Lenis({lerp,smoothWheel:true});
+  document.documentElement.classList.add('lenis');
+  function raf(t){lenis.raf(t);requestAnimationFrame(raf);}
+  requestAnimationFrame(raf);
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click',e=>{
+      const id=a.getAttribute('href');
+      if(id.length>1&&document.querySelector(id)){e.preventDefault();lenis.scrollTo(id,{duration:1.4});}
+    });
+  });
 })();
 
 // Gota de água nos botões — nasce no ponto do toque
