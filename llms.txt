@@ -10,7 +10,7 @@
 
 ## Pages
 
-- [Home: a new way to create school assignments](https://dookia.app/): how it works, defending a paper, plans for solo or group work, FAQ, free start in the app.
+- [Home: a new way to create school assignments](https://dookia.app/): how it works, defending a paper, plans for solo or group work, FAQ.
 - [Privacy Policy](https://dookia.app/privacidade.html): what data is processed, purposes, providers (Supabase, n8n, Google AI and search services, Kursinha in Angola, Lojou in Mozambique), retention and deletion within 7 days.
 - [Terms of Use](https://dookia.app/termos.html): what the service does (Mini and Máx plans, Word and PDF delivery), account and group data rules, AI limits, one-time purchases and refunds, Angola law.
 
