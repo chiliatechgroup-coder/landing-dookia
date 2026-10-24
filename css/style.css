@@ -447,6 +447,7 @@ footer{padding:72px 0 0;overflow:hidden}
   .hero-split .cta-row{justify-content:center}
   .girl{position:relative;inset:auto;width:100%;height:400px;margin:0 0 -48px;object-fit:cover;object-position:50% 0;transform:none}
   .blob{top:0;height:100%}
+  .blob-accent-left{cx:58px}
   .hero-photo::after{display:none}
   .trust{background:var(--hero-blue);padding:20px 0}
   .trust-cap{display:none}
